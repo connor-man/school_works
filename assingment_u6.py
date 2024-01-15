@@ -1,5 +1,6 @@
 import numpy as np 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 array1 = np.arange(1, 11)
 array2 = array1 * array1
@@ -26,3 +27,11 @@ low_norbid = df['Norbid'] < 50
 
 filtered_df = df[low_norbid]
 print(filtered_df)
+
+dorble_type = df['Dorble_type'].value_counts()
+
+plt.figure()
+plt.pie(dorble_type, labels=dorble_type.index)
+plt.title('The Proportion of Dorble Types of The Goobers')
+# plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
+plt.show()
