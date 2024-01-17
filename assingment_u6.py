@@ -31,7 +31,15 @@ print(filtered_df)
 dorble_type = df['Dorble_type'].value_counts()
 
 plt.figure()
-plt.pie(dorble_type, labels=dorble_type.index)
+plt.pie(dorble_type, labels=dorble_type.index,autopct='%1.1f%%')
 plt.title('The Proportion of Dorble Types of The Goobers')
 # plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
+plt.show()
+
+plt.figure()
+fumble = df['Fumbles']
+plt.hist(fumble)
+plt.title('Distrubtion of Fumbles Amoung Goobers')
+plt.xlabel('Amount')
+plt.ylabel('Fumbles')
 plt.show()
